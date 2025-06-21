@@ -1,8 +1,8 @@
 
-# 🚀 QuickSend DevOps Deployment
+# 🚀 QuickSend DevOps Deployment 
 
 This project demonstrates the complete process of Dockerizing and deploying the **QuickSend** web application on an **AWS EC2** instance using **Docker**.
-
+Github(https://github.com/nihalshetty1/devops-assignment.git)
 ---
 
 ## 📁 Project Overview
