@@ -109,7 +109,7 @@ Screenshots:
 
 
 - EC2 instance dashboard
-![Screenshot (15)](https://github.com/user-attachments/assets/d3d4bd5b-ee85-46e3-bf6e-8535930b0e8f)
+![Screenshot (15)](https://github.com/user-attachments/assets/1ecf305f-f9d4-47ea-bf84-b79c94071791)
 
 
 - SSH terminal session
