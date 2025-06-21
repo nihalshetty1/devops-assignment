@@ -49,14 +49,14 @@ http://localhost:3000
 
 - OS: Ubuntu 22.04 LTS  
 - Instance Type: `t2.micro` (Free Tier)  
-- Key Pair: `quicksend-key.pem`  
+- Key Pair: `quick-key.pem`  
 - Inbound Rules:
   - SSH (22) — My IP  
   - Custom TCP (3000) — 0.0.0.0/0 (Anywhere)
 
 ### 🔹 Step 2: Connect via SSH
 ```bash
-ssh -i "quicksend-key.pem" ubuntu@<your-ec2-public-ip>
+ssh -i "quick-key.pem" ubuntu@<your-ec2-public-ip>
 ```
 
 ### 🔹 Step 3: Install Docker
