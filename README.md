@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p align="center"><img width="70%" src="https://hacktoberfest.com/_next/static/media/logo-hacktoberfest--horizontal.ebc5fdc8.svg"/></p>
 
 <h1>
@@ -68,3 +69,6 @@ If you liked this project, please leave a 🌟
 <p align="center">
 	With :heart: by <a href="https://www.sarthakskumar.com" target="_blank">Sarthak S Kumar</a>
 </p>
+=======
+# devops-assignment
+>>>>>>> 1767ea4c86911c5a75e74b342098304a4de5eadb
