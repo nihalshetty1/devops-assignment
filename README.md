@@ -129,6 +129,7 @@ Screenshots:
 - App live via EC2 IP
 ![Screenshot (21)](https://github.com/user-attachments/assets/812418ad-7be0-4311-bcb8-46c19275f197)
 
+
 ---
 
 ## 🔐 Notes
