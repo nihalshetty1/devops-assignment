@@ -6,9 +6,6 @@ import "react-phone-number-input/style.css"; // Import the CSS for PhoneInput
 import {
   BsWhatsapp,
   BsTelegram,
-  BsLinkedin,
-  BsGithub,
-  BsInstagram,
 } from "react-icons/bs";
 import { FaSun, FaMoon } from "react-icons/fa";
 
@@ -89,65 +86,17 @@ export default function Home() {
         />
         <button
           className={`${
-            isValidPhoneNumber(value||"") // Same as below comment
+            isValidPhoneNumber(value || "")
               ? "bg-blue-500 hover:bg-blue-600"
               : "bg-gray-600"
           } text-white px-4 py-2 rounded-lg mt-4 w-full`}
           onClick={handleSendClick}
-          disabled={!isValidPhoneNumber(value||"")} // Updated isValidPhoneNumber(value) to isValidPhoneNumber(value||"") to pass empty string when value is undefined
+          disabled={!isValidPhoneNumber(value || "")}
         >
           Send
         </button>
       </div>
-      <div className="absolute bottom-0 w-full flex flex-col items-center p-5 justify-center text-gray-400">
-        <p className="">
-          &copy; Copyright 2023{" "}
-          <a href="https://github.com/SarthakSKumar/QuickSend" target="_blank">
-            Sarthak S Kumar
-          </a>
-        </p>
-        <ul className="flex gap-x-10 py-2">
-          <li>
-            <a
-              href="https://www.linkedin.com/in/sarthakskumar/"
-              target="_blank"
-              className={
-                messenger === "whatsapp"
-                  ? `hover:text-green-500`
-                  : `hover:text-blue-500`
-              }
-            >
-              <BsLinkedin className="text-lg hover:scale-110" />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.github.com/sarthakskumar/"
-              target="_blank"
-              className={
-                messenger === "whatsapp"
-                  ? `hover:text-green-500`
-                  : `hover:text-blue-500`
-              }
-            >
-              <BsGithub className="text-lg hover:scale-110" />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.instagram.com/sarthakskumar"
-              target="_blank"
-              className={
-                messenger === "whatsapp"
-                  ? `hover:text-green-500`
-                  : `hover:text-blue-500`
-              }
-            >
-              <BsInstagram className="text-lg hover:scale-110" />
-            </a>
-          </li>
-        </ul>
-      </div>
     </main>
   );
 }
+
