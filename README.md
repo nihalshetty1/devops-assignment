@@ -183,7 +183,7 @@ http://<your-ec2-public-ip>:3000
 
 ##  Notes
 
-- Backup your `.pem` key file — without it, SSH access is lost.
+- Backup your `.pem` key file, without it SSH access is lost.
 - Use `docker ps` to check running containers.
 - To stop the app:  
   ```bash
