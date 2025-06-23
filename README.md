@@ -24,40 +24,55 @@ To containerize the `QuickSend` web application using Docker and deploy it on a 
 ---
 
 ## Local Docker Setup
+This section demonstrates how to containerize and run the QuickSend application on your local machine using Docker.
 
 ### 🔹 Build Docker Image
 ```bash
 docker build -t quicksend .
 ```
+This command creates a Docker image named quicksend using the instructions defined in the Dockerfile.
+By containerizing the app, it ensures environment consistency regardless of the host machine.
 
 ### 🔹 Run the Container
 ```bash
 docker run -p 3000:3000 quicksend
 ```
+This command launches the app inside a Docker container and maps:
+- Port 3000 of your local machine (host)
+- To port 3000 inside the container (where the app is listening)
+This allows you to open the app on your browser via localhost.
+
+Use -d (detached mode) to run the container in the background if needed:
+```bash
+docker run -d -p 3000:3000 quicksend
+```
 
 ### 🔹 Access the App
-Open your browser and visit:
+Open the browser and visit:
 ```
 http://localhost:3000
 ```
-
+QuickSend UI loaded from the Docker container running locally can be viewed.
+ 
 ---
 
 ##  EC2 Deployment (AWS)
+This section covers deploying the same Dockerized QuickSend app to a publicly accessible cloud server using AWS EC2.
 
 ### 🔹 Step 1: Launch EC2 Instance
 
 - OS: Ubuntu 22.04 LTS  
-- Instance Type: `t2.micro` (Free Tier)  
-- Key Pair: `quick-key.pem`  
+- Instance Type: `t3.micro` (Free Tier)  
+- Key Pair: Use `quick-key.pem` to SSH into the server
 - Inbound Rules:
-  - SSH (22) — My IP  
-  - Custom TCP (3000) — 0.0.0.0/0 (Anywhere)
-
+  - SSH (22) — Allow only your current IP
+  - Custom TCP (3000) — Allow from 0.0.0.0/0 (so anyone can access the app)
+  
 ### 🔹 Step 2: Connect via SSH
 ```bash
 ssh -i "quick-key.pem" ubuntu@<your-ec2-public-ip>
 ```
+This command connects you securely to the EC2 instance using the downloaded private key. All terminal commands will now be executed directly on your cloud server
 
 ### 🔹 Step 3: Install Docker
 ```bash
@@ -67,22 +82,31 @@ sudo usermod -aG docker ubuntu
 newgrp docker
 docker --version
 ```
+-  Installs Docker and its dependencies
+-  Adds the ubuntu user to the Docker group so that sudo is no longer needed
+-  docker --version confirms the installation is successful
 
 ### 🔹 Step 4: Clone the GitHub Repo
 ```bash
 git clone https://github.com/nihalshetty1/devops-assignment.git
 cd devops-assignment
 ```
+This pulls the latest source code (with Dockerfile and all configurations) from your GitHub repository onto the EC2 instance.
 
 ### 🔹 Step 5: Build & Run the App
 ```bash
 docker build -t quicksend .
 docker run -d -p 3000:3000 quicksend
 ```
+-  Docker builds the app from the source
+-  It runs in the background using port 3000
+-  Now accessible from anywhere via EC2’s public IP
+
+Use `docker ps` to confirm that the container is running.
 
 ### 🔹 Step 6: Access the App via Public IP
 
-Open in your browser:
+Open in the browser:
 ```
 http://<your-ec2-public-ip>:3000
 ```
