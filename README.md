@@ -1,7 +1,8 @@
 #  QuickSend DevOps Deployment 
 
-This project demonstrates the complete process of Dockerizing and deploying the **QuickSend** web application on an **AWS EC2** instance using **Docker**.
-https://github.com/nihalshetty1/devops-assignment.git
+###  Objective
+To containerize the `QuickSend` web application using Docker and deploy it on a public-facing AWS EC2 instance, enabling easy access and scalable hosting with minimal setup.
+
 ---
 
 ##  Project Overview
@@ -15,10 +16,10 @@ https://github.com/nihalshetty1/devops-assignment.git
 
 ##  Tech Stack
 
-- AWS EC2 (Ubuntu 22.04)
-- Docker
-- Node.js / Next.js
-- Git + GitHub
+- **Next.js** for frontend app
+- **Docker** for containerization
+- **AWS EC2** for cloud deployment
+- **GitHub** for source control
 
 ---
 
@@ -92,41 +93,66 @@ http://<your-ec2-public-ip>:3000
 
 ## Screenshots
 
-Screenshots:  
+###  Screenshot Contents
 
-### Screenshot contents:
-- Docker build & run (local)
-![Screenshot (6)](https://github.com/user-attachments/assets/e97eb6a4-fada-47ce-a794-d04b30fcf6a1)
+---
 
-![Screenshot (8)](https://github.com/user-attachments/assets/7d2346bf-fa10-4f26-9ec4-7723a6a8c307)
+####  Docker Build & Run (Local Machine)
 
-![Screenshot (5)](https://github.com/user-attachments/assets/fafabd08-08f7-4344-b177-b13c426cb981)
+- `docker build -t quicksend .`
+  
+  ![Docker Build - Local](https://github.com/user-attachments/assets/e97eb6a4-fada-47ce-a794-d04b30fcf6a1)
 
+- `docker run -p 3000:3000 quicksend`
+  
+  ![Docker Run - Local](https://github.com/user-attachments/assets/7d2346bf-fa10-4f26-9ec4-7723a6a8c307)
 
-- App running at `localhost:3000`
-![Screenshot (10)](https://github.com/user-attachments/assets/e00173a5-a47e-4f6a-8e18-b15740d21a65)
+- Terminal logs and confirmation
+  
+  ![Docker Log Output](https://github.com/user-attachments/assets/fafabd08-08f7-4344-b177-b13c426cb981)
 
+---
 
-- EC2 instance dashboard
-![Screenshot (15)](https://github.com/user-attachments/assets/1ecf305f-f9d4-47ea-bf84-b79c94071791)
+####  App Running at `localhost:3000` (Local)
+![Localhost App View](https://github.com/user-attachments/assets/642e8310-2177-429f-84ab-87cb3f8fe027)
 
+---
 
-- SSH terminal session
-![Screenshot (16)](https://github.com/user-attachments/assets/e46b7e0d-7e57-48ea-8ce2-6ccda1d88c1e)
+####  EC2 Instance Dashboard (AWS Console)
 
-![Screenshot (17)](https://github.com/user-attachments/assets/215b88d5-7460-48c8-8bb1-9cc01aed3b4b)
+![EC2 Instance View](https://github.com/user-attachments/assets/1ecf305f-f9d4-47ea-bf84-b79c94071791)
 
-![Screenshot (18)](https://github.com/user-attachments/assets/b157222a-863c-464e-8c04-25da41163466)
+---
 
-![Screenshot (19)](https://github.com/user-attachments/assets/2d5b1235-ad6c-45c6-ba75-fcbab5100115)
+####  SSH Terminal Session (EC2 Access)
 
+- Initial SSH Login
 
-- `docker ps` output on EC2
-![Screenshot (20)](https://github.com/user-attachments/assets/dbe2c478-a396-469b-b3d2-cf23cdfcff16)
+  ![SSH Login](https://github.com/user-attachments/assets/e46b7e0d-7e57-48ea-8ce2-6ccda1d88c1e)
 
+- Cloning repo, installing Docker
 
-- App live via EC2 IP
-![Screenshot (21)](https://github.com/user-attachments/assets/812418ad-7be0-4311-bcb8-46c19275f197)
+  ![Git Clone + Install Docker](https://github.com/user-attachments/assets/215b88d5-7460-48c8-8bb1-9cc01aed3b4b)
+
+- Building Docker image on EC2
+
+  ![Docker Build - EC2](https://github.com/user-attachments/assets/b157222a-863c-464e-8c04-25da41163466)
+
+- Running the container
+
+  ![Docker Run - EC2](https://github.com/user-attachments/assets/2d5b1235-ad6c-45c6-ba75-fcbab5100115)
+
+---
+
+####  `docker ps` Output on EC2
+
+![Docker PS - EC2](https://github.com/user-attachments/assets/dbe2c478-a396-469b-b3d2-cf23cdfcff16)
+
+---
+
+####  App Running via EC2 Public IP
+
+![App Live - EC2 Public IP](https://github.com/user-attachments/assets/2c32849c-5c03-4398-a3b2-643e160372c3)
 
 
 ---
