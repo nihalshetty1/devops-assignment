@@ -1,20 +1,19 @@
-
-# 🚀 QuickSend DevOps Deployment 
+#  QuickSend DevOps Deployment 
 
 This project demonstrates the complete process of Dockerizing and deploying the **QuickSend** web application on an **AWS EC2** instance using **Docker**.
 https://github.com/nihalshetty1/devops-assignment.git
 ---
 
-## 📁 Project Overview
+##  Project Overview
 
-- 🔧 Built a production-ready container for a Next.js app using Docker  
-- ☁️ Deployed it on a free-tier AWS EC2 Ubuntu instance  
-- 🌐 Hosted the app and made it accessible via public IP  
-- ✅ Documented each step with screenshots
+-  Built a production-ready container for a Next.js app using Docker  
+-  Deployed it on a free-tier AWS EC2 Ubuntu instance  
+-  Hosted the app and made it accessible via public IP  
+-  Documented each step with screenshots
 
 ---
 
-## ⚙️ Tech Stack
+##  Tech Stack
 
 - AWS EC2 (Ubuntu 22.04)
 - Docker
@@ -23,7 +22,7 @@ https://github.com/nihalshetty1/devops-assignment.git
 
 ---
 
-## 🐳 Local Docker Setup
+## Local Docker Setup
 
 ### 🔹 Build Docker Image
 ```bash
@@ -43,7 +42,7 @@ http://localhost:3000
 
 ---
 
-## ☁️ EC2 Deployment (AWS)
+##  EC2 Deployment (AWS)
 
 ### 🔹 Step 1: Launch EC2 Instance
 
@@ -87,11 +86,11 @@ Open in your browser:
 http://<your-ec2-public-ip>:3000
 ```
 
-✅ The QuickSend app should now be live and accessible online.
+ The QuickSend app should now be live and accessible online.
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 Screenshots:  
 
@@ -132,7 +131,7 @@ Screenshots:
 
 ---
 
-## 🔐 Notes
+##  Notes
 
 - Backup your `.pem` key file — without it, SSH access is lost.
 - Use `docker ps` to check running containers.
@@ -143,7 +142,7 @@ Screenshots:
 
 ---
 
-## ✅ Author
+##  Author
 
 **Nihal Shetty**  
 B.Tech (CSE) | DevOps & Cloud Enthusiast
